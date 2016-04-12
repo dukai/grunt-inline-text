@@ -1,7 +1,7 @@
 {
   "name": "grunt-inline-text",
   "description": "Package the requirejs text plugin module content to inline amd javascript module, so after these processing, the modules that have text! dependencies can be used cross domains.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "",
   "author": {
     "name": "dukai",
@@ -26,6 +26,9 @@
   },
   "scripts": {
     "test": "grunt test"
+  },
+  "dependencies": {
+    "template": "git+https://github.com/dukai/template.git"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "^0.9.2",
