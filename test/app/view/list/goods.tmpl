@@ -1,0 +1,30 @@
+<?if(this.goods.length > 0){?>
+<ul>
+<?
+for(var i = 0, len = this.goods.length; i < len; i++){
+	var good = this.goods[i];
+?>
+<li class="list-chunk">
+	<a href="<?=this.staticConfig.WEB_ALIAS?>/client/goods/v1/app/page/detail?goodsId=<?=good.goodsId?>" class="list-href" target="_blank">
+		<div class="imgbox">
+			<img src="<?=good.picBean.mg_190_134?>" />
+			<?if(good.goodsStateMarkBean.subMark != ''){?>
+			<span class="list-active">
+				<img src="<?=this.staticPre?>/images/ico_<?=good.goodsStateMarkBean.subMark?>.png" />
+			</span>
+			<?}?>
+		</div>
+		<div class="gttl"><?=good.goodsName?></div>
+		<div class="price">
+			<span class="up">优金币：<em><?=good.ucoinPrice?></em></span> 
+			<?if(good.goodsStateMarkBean.orderMark != 'cash'){?>
+			<span class="mp">市场价：<?=good.marketPrice?>元</span>
+			<?}?>
+		</div>
+	</a>
+</li>
+<?}?>
+</ul>
+<?}else{?>
+<div class="no-data">精彩内容 敬请期待</div>
+<?}?>.
